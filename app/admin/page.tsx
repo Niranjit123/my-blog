@@ -23,7 +23,7 @@ export default function AdminPage(){
 
 
   // Handle form input changes
-  const handleChange = (e) => {
+  const handleChange = (e:  React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -31,7 +31,7 @@ export default function AdminPage(){
     }));
   };
 
-  const handleLogin = async(e)=>{
+  const handleLogin = async(e: React.FormEvent)=>{
               e.preventDefault()
              try {
               const response = await fetch('api/auth/', {
@@ -58,7 +58,7 @@ export default function AdminPage(){
   }
 
 
-  const handleSubmit = async(e)=>{
+  const handleSubmit = async(e: React.FormEvent)=>{
     e.preventDefault()
     setIsSubmitting(true)
     setMessage('')

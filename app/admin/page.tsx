@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 
 
-const ADMIN_PASSWORD = 'niranjit'
+
 
 export default function AdminPage(){
   
@@ -31,14 +31,30 @@ export default function AdminPage(){
     }));
   };
 
-  const handleLogin = (e)=>{
+  const handleLogin = async(e)=>{
               e.preventDefault()
-              if (password === ADMIN_PASSWORD){
-               setIsLoggedIn(true)
-               setError('')
-              } else {
-               setError('Invalid password')
-              }
+             try {
+              const response = await fetch('api/auth/', {
+                method: 'POST',
+                headers:{
+                  'Content-type': 'application/json'
+
+                }, 
+                body: JSON.stringify({password})
+
+              })
+
+               if(response.ok){
+                setIsLoggedIn(true)
+                setError('')
+
+               }else{
+                setError('Invalid Password')
+               }
+
+             } catch (error) {
+              setError('Authentication Failed')
+             }
   }
 
 

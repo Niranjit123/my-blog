@@ -10,14 +10,7 @@ export async function generateStaticParams(){
 }
 
 
-interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  content: string;
-  contentHtml: string;
-}
+
 
 type BlogPostParams = {
   params: {

@@ -52,7 +52,7 @@ export default function AdminPage(){
                 setError('Invalid Password')
                }
 
-             } catch (error) {
+             } catch (_error) {
               setError('Authentication Failed')
              }
   }
@@ -93,7 +93,7 @@ export default function AdminPage(){
       }
 
 
-    } catch(error){
+    } catch(_error){
       setMessage('An error occurred while creating the post.')
 
     } finally{

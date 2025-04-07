@@ -12,7 +12,7 @@ export async function  POST(request){
             return NextResponse.json({authenticated:false}, {status:401})
         }
         
-    } catch (error) {
+    } catch (_error) {
         return NextResponse.json({error: 'Authentification failed'}, {status: 500})
     }
 }

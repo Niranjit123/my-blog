@@ -51,7 +51,7 @@ export default function AdminPage(){
                }else{
                 setError('Invalid Password')
                }
-
+             // eslint-disable-next-line
              } catch (_error) {
               setError('Authentication Failed')
              }
@@ -92,7 +92,7 @@ export default function AdminPage(){
         setMessage(`Error:${data.message}`)
       }
 
-
+        // eslint-disable-next-line
     } catch(_error){
       setMessage('An error occurred while creating the post.')
 

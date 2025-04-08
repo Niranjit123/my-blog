@@ -9,7 +9,7 @@ export async function generateStaticParams(){
     }))
 }
 
-
+// eslint-disable-next-line
 
 
 type BlogPostParams = {

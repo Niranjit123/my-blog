@@ -11,7 +11,7 @@ export async function  POST(request){
         } else {
             return NextResponse.json({authenticated:false}, {status:401})
         }
-        
+       // eslint-disable-next-line 
     } catch (_error) {
         return NextResponse.json({error: 'Authentification failed'}, {status: 500})
     }

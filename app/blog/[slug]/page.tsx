@@ -19,8 +19,8 @@ type BlogPostParams = {
 };
 
 export default async function BlogPost({params}: BlogPostParams){
-  const resolvedParams = await params  
-  const {slug} = resolvedParams
+  
+  const {slug} =  params  
 
     const post = await getPostContent(slug)
     return(

@@ -29,7 +29,7 @@ export default async function Home() {
                     {post.title}
                   </Link>
                 </h3>
-                <p className="text-gray-500 text-sm mb-3">{post.date as string}</p>
+                {/* <p className="text-gray-500 text-sm mb-3">{post.date as string}</p> */}
                 <p className="mb-4 text-gray-700">{post.excerpt}</p>
                 <Link 
                   href={`/blog/${post.slug}`} 
